@@ -18,7 +18,7 @@
     va_list args;
     va_start(args, selector);
     NSMutableOrderedSet *fieldNames = [[NSMutableOrderedSet alloc] init];
-    for (int i = 0; i < [self numberOfArgsForSelector:selector]; i++) {
+    for (NSUInteger i = 0; i < [self numberOfArgsForSelector:selector]; i++) {
         [fieldNames addObject:va_arg(args, NSString *)];
     }
     va_end(args);
